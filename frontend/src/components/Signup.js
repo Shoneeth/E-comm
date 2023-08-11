@@ -18,7 +18,7 @@ export default function Signup() {
       const collectData = async(e)=>{
             //console.log(name,email,password);
             e.preventDefault()
-            let result= await fetch('http://localhost:5000/register',{
+            let result= await fetch('https://e-comm-sand.vercel.app/register',{
               method:'post',
               body: JSON.stringify({name,email,password}),
               headers:{
