@@ -14,7 +14,7 @@ const Login =()=>{
       const loginHandle=async(e)=>{
             //console.log(name,email,password);
             e.preventDefault();
-            let result= await fetch('http://localhost:5000/login',{
+            let result= await fetch('https://e-comm-sand.vercel.app/login',{
               method:'post',
               body: JSON.stringify({email,password}),
               headers:{
