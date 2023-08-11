@@ -26,7 +26,7 @@ const UpdateProduct=()=>{
       }
 
       const updateProduct= async()=>{
-            let result = await fetch(`http://localhost:5000/product/${Params.id}`,{
+            let result = await fetch(`https://e-comm-sand.vercel.app/product/${Params.id}`,{
                   method:'put',
                   body:JSON.stringify({name,price,category,company}),
                   headers:{
