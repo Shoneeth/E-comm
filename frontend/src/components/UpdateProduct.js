@@ -13,7 +13,7 @@ const UpdateProduct=()=>{
       },[])
 
       const getProductDetails = async()=>{
-            let result = await fetch(`http://localhost:5000/product/${Params.id}`,{
+            let result = await fetch(`https://e-comm-sand.vercel.app/product/${Params.id}`,{
                   headers:{
                         authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
                   }
