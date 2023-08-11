@@ -9,7 +9,7 @@ const ProductList =()=>{
       },[])
 
       const getproducts = async ()=>{
-            let result = await fetch("http://localhost:5000/products",{
+            let result = await fetch("https://e-comm-sand.vercel.app/products",{
                   headers:{
                         authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`  
                   }
@@ -19,7 +19,7 @@ const ProductList =()=>{
       }
 
       const deleteProduct = async(id) => {
-            let result = await fetch(`http://localhost:5000/product/${id}`,{
+            let result = await fetch(`https://e-comm-sand.vercel.app/product/${id}`,{
                   method:"Delete",
                   headers:{
                         authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
@@ -32,7 +32,7 @@ const ProductList =()=>{
       }
       const searchHandle = async (e)=>{
             let key = e.target.value;
-            let result = await fetch(`http://localhost:5000/search/${key}`,{
+            let result = await fetch(`https://e-comm-sand.vercel.app/search/${key}`,{
                   headers:{
                   authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
                   }
