@@ -4,7 +4,7 @@ require('./dbs/configdb');
 const User = require('./dbs/user');
 const Product = require('./dbs/product');
 const Jwt= require('jsonwebtoken');
-const jwtkey ='e-comm';
+const jwtkey =JWT_KEY;
 
 const app=express();
 app.use(express.json());
